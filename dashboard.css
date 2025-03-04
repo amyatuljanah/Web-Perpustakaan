@@ -1,0 +1,218 @@
+/* Dashboard */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #A7C7E7, #D1E6F1); /* Soft light blue gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: cover;
+    padding: 20px;
+    background-image: url('book.png'); /* Sesuaikan dengan nama file gambarmu */
+    background-size: cover; /* Agar gambar menyesuaikan layar */
+    background-position: center; /* Posisi gambar di tengah */
+    background-attachment: fixed; /* Gambar tetap saat scrolling */
+    font-family: Arial, sans-serif; /* Font agar lebih rapi */
+}
+
+h1 {
+    color: #4A90E2; /* Soft blue */
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin:  auto; /* Memastikan margin seimbang di kedua sisi */
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Style untuk pembungkus search bar */
+div {
+
+    justify-content: center;
+    align-items: center;
+     /* Menambahkan jarak antara input dan tombol */
+   
+}
+
+/* Style untuk input pencarian */
+.search-container {
+    display: flex;
+    justify-content: center; /* Menengahkan secara horizontal */
+    align-items: center; /* Menengahkan secara vertikal jika perlu */
+    width: 100%; /* Pastikan elemen memenuhi lebar */
+    margin-top: -10px; /* Beri sedikit jarak ke atas */
+}
+
+#search-input {
+    width: 250px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #A7C7E7;
+    border-radius: 5px;
+    text-align: center; /* Biar placeholder teks di tengah */
+}
+
+.search-container button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Jarak antara input dan tombol */
+    border-radius: 5px;
+}
+
+
+/* Style untuk tombol pencarian */
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover efek pada tombol */
+button:hover {
+    background-color: #3A78C2;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+h2 {
+    color: #4A90E2; /* Soft blue */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Links for adding and logging out */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgb(232, 55, 55);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: rgb(200, 40, 40);
+}
+
+/* Table Styles */
+table {
+    width: 80%; /* Sesuaikan ukuran tabel */
+    margin: auto; /* Pusatkan tabel */
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+td img {
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+}
+
+td p {
+    margin-top: 5px; /* Memberikan jarak sedikit di atas judul */
+    text-align: center;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+th {
+    background-color: #5fbbf5;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #000000; /* Warna lebih gelap */
+}
+
+/* Table Row Hover Effect */
+tr:hover {
+    background-color: #f5f5f5;
+
+}
+
+
+/* Action Links in Table */
+a {
+    color: #4A90E2;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #2F73B3; /* Slightly darker blue for hover effect */
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    img {
+        width: 50px;
+    }
+}
+
+.notification-overlay {
+    position: fixed;
+    top: 20px; /* Posisi di atas tengah */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.notification-box {
+    background-color: white;
+    padding: 20px 30px; /* Padding untuk ruang di dalam box */
+    min-width: 300px;
+    box-shadow: 0px 4px 6px  rgba(0, 0, 0, 0.2); /* Shadow untuk efek 3D */
+    text-align: center;
+}
+
+.notification-message {
+    font-size: 16px; /* Ukuran font */
+    color: #28a745; /* Warna hijau untuk pesan sukses */
+    font-weight: bold;
+}
